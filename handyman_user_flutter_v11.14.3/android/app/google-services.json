@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "345005038002",
+    "project_id": "vizir-29d5f",
+    "storage_bucket": "vizir-29d5f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345005038002:android:8b74d931e7247ce23e2cab",
+        "android_client_info": {
+          "package_name": "com.iqonic.servicebooking"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDztqGsQqc9Z2Y2TedIqtSzPgKlUyVxagw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

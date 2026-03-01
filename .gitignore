@@ -1,0 +1,28 @@
+# Keystores - NEVER commit to Git!
+*.jks
+*.keystore
+*.p12
+
+# Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+.gradle/
+
+# Android
+android/local.properties
+android/.gradle/
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+
+# Miscellaneous
+*.class
+*.lock
+*.log
+*.swp
+.DS_Store
+.env
+.env.local

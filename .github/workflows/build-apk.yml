@@ -1,0 +1,76 @@
+name: Build Release APKs
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.16.0'
+        channel: 'stable'
+
+    - name: Get Flutter dependencies
+      run: |
+        flutter pub get
+        cd handyman_user_flutter_v11.14.3 && flutter pub get
+        cd ../provider_flutter_v11.14.3 && flutter pub get
+
+    - name: Create User Keystore
+      run: |
+        echo "${{ secrets.USER_KEYSTORE }}" | base64 --decode > user_keystore.jks
+
+    - name: Create Provider Keystore
+      run: |
+        echo "${{ secrets.PROVIDER_KEYSTORE }}" | base64 --decode > provider_keystore.jks
+
+    - name: Build User APK Release
+      working-directory: handyman_user_flutter_v11.14.3
+      run: |
+        flutter build apk --release \
+          --build-name=11.14.3 \
+          --build-number=108
+
+    - name: Build Provider APK Release
+      working-directory: provider_flutter_v11.14.3
+      run: |
+        flutter build apk --release \
+          --build-name=11.14.2 \
+          --build-number=99
+
+    - name: Upload User APK
+      uses: actions/upload-artifact@v3
+      with:
+        name: handyman-user-release-apk
+        path: handyman_user_flutter_v11.14.3/build/app/outputs/flutter-apk/app-release.apk
+
+    - name: Upload Provider APK
+      uses: actions/upload-artifact@v3
+      with:
+        name: handyman-provider-release-apk
+        path: provider_flutter_v11.14.3/build/app/outputs/flutter-apk/app-release.apk
+
+    - name: Create Release
+      uses: actions/create-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
