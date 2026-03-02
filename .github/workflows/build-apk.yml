@@ -24,11 +24,11 @@ jobs:
         flutter-version: '3.16.0'
         channel: 'stable'
 
-    - name: Get Flutter dependencies
-      run: |
-        flutter pub get
-        cd handyman_user_flutter_v11.14.3 && flutter pub get
-        cd ../provider_flutter_v11.14.3 && flutter pub get
+    - name: Get Flutter dependencies for User App
+      run: cd handyman_user_flutter_v11.14.3 && flutter pub get
+
+    - name: Get Flutter dependencies for Provider App
+      run: cd provider_flutter_v11.14.3 && flutter pub get
 
     - name: Create User Keystore
       run: |
