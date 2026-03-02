@@ -21,7 +21,7 @@ dependencies:
   url_launcher: ^6.3.2
   flutter_vector_icons: ^2.0.0
   path_provider: ^2.1.5
-  dotted_border: ^3.1.0
+  dotted_border: ^2.1.0
 #  custom_date_range_picker: ^1.1.0
 
   #Firebase
