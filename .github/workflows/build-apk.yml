@@ -36,14 +36,15 @@ jobs:
         run: |
           set -e
           decode_ok=0
+          USER_KEYSTORE_PATH="handyman_user_flutter_v11.14.3/user_keystore.jks"
 
           if [ -n "$USER_KEYSTORE_B64" ]; then
             if printf '%s' "$USER_KEYSTORE_B64" \
               | sed -E 's#^data:.*;base64,##' \
               | tr -d '\r\n\t ' \
               | tr '_-' '/+' \
-              | base64 --decode --ignore-garbage > user_keystore.jks 2>/dev/null; then
-              if [ -s user_keystore.jks ]; then
+              | base64 --decode --ignore-garbage > "$USER_KEYSTORE_PATH" 2>/dev/null; then
+              if [ -s "$USER_KEYSTORE_PATH" ]; then
                 decode_ok=1
                 echo "User keystore decoded from USER_KEYSTORE secret."
               fi
@@ -52,9 +53,9 @@ jobs:
 
           if [ "$decode_ok" -ne 1 ]; then
             echo "Generating fallback user keystore for CI."
-            rm -f user_keystore.jks
+            rm -f "$USER_KEYSTORE_PATH"
             keytool -genkeypair -v \
-              -keystore user_keystore.jks \
+              -keystore "$USER_KEYSTORE_PATH" \
               -storepass 'Antoine@2025' \
               -alias 'user_key' \
               -keypass 'Antoine@2025' \
@@ -70,14 +71,15 @@ jobs:
         run: |
           set -e
           decode_ok=0
+          PROVIDER_KEYSTORE_PATH="provider_flutter_v11.14.3/provider_keystore.jks"
 
           if [ -n "$PROVIDER_KEYSTORE_B64" ]; then
             if printf '%s' "$PROVIDER_KEYSTORE_B64" \
               | sed -E 's#^data:.*;base64,##' \
               | tr -d '\r\n\t ' \
               | tr '_-' '/+' \
-              | base64 --decode --ignore-garbage > provider_keystore.jks 2>/dev/null; then
-              if [ -s provider_keystore.jks ]; then
+              | base64 --decode --ignore-garbage > "$PROVIDER_KEYSTORE_PATH" 2>/dev/null; then
+              if [ -s "$PROVIDER_KEYSTORE_PATH" ]; then
                 decode_ok=1
                 echo "Provider keystore decoded from PROVIDER_KEYSTORE secret."
               fi
@@ -86,9 +88,9 @@ jobs:
 
           if [ "$decode_ok" -ne 1 ]; then
             echo "Generating fallback provider keystore for CI."
-            rm -f provider_keystore.jks
+            rm -f "$PROVIDER_KEYSTORE_PATH"
             keytool -genkeypair -v \
-              -keystore provider_keystore.jks \
+              -keystore "$PROVIDER_KEYSTORE_PATH" \
               -storepass 'Antoine@2025' \
               -alias 'provider_key' \
               -keypass 'Antoine@2025' \
