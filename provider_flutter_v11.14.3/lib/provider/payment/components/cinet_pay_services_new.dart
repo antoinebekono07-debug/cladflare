@@ -24,14 +24,16 @@ class CinetPayServicesNew {
   final String transactionId = Random().nextInt(100000000).toString();
 
   Future<void> payWithCinetPay({required BuildContext context}) async {
-    await Navigator.push(getContext, MaterialPageRoute(builder: (_) => cinetPay()));
+    await Navigator.push(
+        getContext, MaterialPageRoute(builder: (_) => cinetPay()));
     appStore.setLoading(false);
   }
 
   Widget cinetPay() {
     String cinetPayApiKey = '';
     String siteId = '';
-    String secretKey = '';
+    // Note: secretKey is obtained from local/remote config
+    // String secretKey = ''; // Removed unused variable
 
     if (paymentSetting.isTest == 1) {
       cinetPayApiKey = paymentSetting.testValue!.cinetPublicKey!;

@@ -79,12 +79,10 @@ class SuccessDialog extends StatelessWidget {
               left: 0,
               right: 0,
               child: DottedBorder(
-                options: CircularDottedBorderOptions(
-                  color: primaryColor,
-                  strokeWidth: 2,
-                  dashPattern: [8, 9],
-                  padding: EdgeInsets.all(6),
-                ),
+                color: primaryColor,
+                strokeWidth: 2,
+                dashPattern: [8, 9],
+                padding: EdgeInsets.all(6),
                 child: Center(
                   child: Container(
                     height: 100,
