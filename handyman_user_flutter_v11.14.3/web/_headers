@@ -1,0 +1,11 @@
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/favicon.ico
+  Cache-Control: max-age=31536000
+
+/icons/*
+  Cache-Control: max-age=31536000
+
+/main.dart.js
+  Cache-Control: max-age=86400

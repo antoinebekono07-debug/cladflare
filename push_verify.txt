@@ -1,0 +1,24 @@
+From https://github.com/antoinebekono07-debug/service_app
+ * branch            main       -> FETCH_HEAD
+---HEAD--- 
+050bda11798bc1680a32337e786cd81e93f5fecf
+---ORIGIN_MAIN--- 
+050bda11798bc1680a32337e786cd81e93f5fecf
+---STATUS--- 
+## main...origin/main
+?? .cline_git_info.txt
+?? git_after_push_status.txt
+?? git_branch.txt
+?? git_head.txt
+?? git_lsremote_main.txt
+?? git_origin_main.txt
+?? git_remote.txt
+?? git_status.txt
+?? git_status_before_push.txt
+?? git_status_now.txt
+?? handyman_user_flutter_v11.14.3/cloudflare.json
+?? handyman_user_flutter_v11.14.3/web/_headers
+?? job_65341231520.html
+?? provider_flutter_v11.14.3/build_release.status
+?? push_verify.txt
+?? run_22558850526.html
