@@ -8,7 +8,8 @@ import 'package:booking_system_flutter/main.dart';
 import 'package:booking_system_flutter/network/rest_apis.dart';
 import 'package:booking_system_flutter/screens/auth/sign_in_screen.dart';
 import 'package:booking_system_flutter/services/location_service.dart';
-import 'package:booking_system_flutter/utils/colors.dart';
+import 'package:booking_system_flutter/store/app_store.dart';
+import 'package:booking_system_flutter/utils/colors.dart' as booking_colors;
 import 'package:booking_system_flutter/utils/images.dart';
 import 'package:booking_system_flutter/utils/permissions.dart';
 import 'package:booking_system_flutter/utils/string_extensions.dart';
@@ -29,6 +30,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../component/cached_image_widget.dart';
 import 'app_configuration.dart';
+import 'colors.dart';
 import 'constant.dart';
 
 Future<bool> get isIqonicProduct async => await getPackageName() == appPackageName;
