@@ -30,7 +30,7 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.iqonic.servicebooking"
+    namespace "com.soperiem.client"
     compileSdkVersion 36
     ndkVersion = "27.0.12077973"
 

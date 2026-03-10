@@ -1,7 +1,7 @@
 import 'package:nb_utils/nb_utils.dart';
 
 /// DO NOT CHANGE THIS PACKAGE NAME
-var appPackageName = isAndroid ? 'com.iqonic.servicebooking' : 'com.iqonic.user';
+var appPackageName = isAndroid ? 'com.soperiem.client' : 'com.iqonic.user';
 
 //region Custom Headers
  class CustomHeader {

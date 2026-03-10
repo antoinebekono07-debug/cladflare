@@ -1,8 +1,8 @@
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 
-const APP_NAME = 'Handyman Service';
-const APP_NAME_TAG_LINE = 'On-Demand Home Services App';
+const APP_NAME = 'Soperiem';
+const APP_NAME_TAG_LINE = 'Services à domicile';
 var defaultPrimaryColor = Color(0xFF5F60B9);
 
 // Don't add slash at the end of the url
@@ -15,7 +15,7 @@ const DEFAULT_LANGUAGE = 'en';
 /// You can change this to your Provider App package name
 /// This will be used in Registered As Partner in Sign In Screen where your users can redirect to the Play/App Store for Provider App
 /// You can specify in Admin Panel, These will be used if you don't specify in Admin Panel
-const PROVIDER_PACKAGE_NAME = 'com.iqonic.provider';
+const PROVIDER_PACKAGE_NAME = 'com.soperiem.provider';
 const IOS_LINK_FOR_PARTNER = "";
 
 const IOS_LINK_FOR_USER = '';
