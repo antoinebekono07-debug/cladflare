@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 const APP_NAME = 'Soperiem';
 const APP_NAME_TAG_LINE = 'Services à domicile';
-var defaultPrimaryColor = Color(0xFF5F60B9);
+var defaultPrimaryColor = Color(0xFF008B4E);
 
 // Don't add slash at the end of the url
 
