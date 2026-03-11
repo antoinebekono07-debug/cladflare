@@ -17,13 +17,42 @@ const appButtonColorDark = Color(0xFF282828);
 const primaryColorWithOpacity = Color(0xFFBCBCC7);
 
 const ratingBarColor = Color(0xfff5c609);
+const rattingColor = Color(0xfff5c609);
 
 //Status Color
 const pending = Color(0xFFEA2F2F);
 const accept = Color(0xFFFFF200);
+const on_going = Color(0xFFFD6922);
+const in_progress = Color(0xFFB953C0);
+const hold = Color(0xFFFFBD49);
+const cancelled = Color(0xffFF0303);
+const rejected = Color(0xFF8D0E06);
+const failed = Color(0xFFC41520);
 const completed = Color(0xFF00A859);
 const defaultStatus = Color(0xFF00A859);
+const pendingApprovalColor = Color(0xFF690AD3);
+const waiting = Color(0xFF2CAFAF);
+
+const add_booking = Color(0xFFEA2F2F);
+const assigned_booking = Color(0xFFFD6922);
+const transfer_booking = Color(0xFFFFF200);
 const update_booking_status = Color(0xFF00A859);
+const cancel_booking = Color(0xFFC41520);
+const payment_message_status = Color(0xFFFFBD49);
 const defaultActivityStatus = Color(0xFF00A859);
+
 const add_wallet = Color(0xFF00A859);
+const update_wallet = Color(0xFFFFBD49);
+const wallet_payout_transfer = Color(0xFFFD6922);
+
+const showRedForZeroRatingColor = Color(0xFFFA6565);
+
+const startDriveButtonColor = Color(0xff40c474);
+
+const addExtraCharge = Color(0xFFFD6922);
+const promotionalBannerPendingStatus = Color(0xFFF88A16);
+
+//Service Approval
+const pending_service = Color(0xFFF98900);
+const rejected_service = Color(0xFFFB2F2F);
 const approved_service = Color(0xFF00A859);
