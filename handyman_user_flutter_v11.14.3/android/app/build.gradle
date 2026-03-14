@@ -49,7 +49,7 @@ android {
     }
 
     defaultConfig {
-        applicationId 'com.iqonic.servicebooking'
+        applicationId 'com.soperiem.client'
         minSdkVersion 23
         targetSdkVersion 35
         versionCode 108

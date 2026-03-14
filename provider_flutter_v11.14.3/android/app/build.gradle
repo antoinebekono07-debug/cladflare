@@ -49,7 +49,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.iqonic.provider"
+        applicationId "com.soperiem.provider"
         minSdkVersion 23
         targetSdkVersion 36
         versionCode 100
